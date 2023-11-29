@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block title %}
+    JHM | MOTORES
+{% endblock %}
+
+{% block main %}
+    <section class="container-sobre-motor">
+        <img src="{{ motor['img_url'] }}" alt="Motor">
+
+        <div class="sobre-motor">
+            <h2>{{ motor['nome'] }}</h2>
+
+            <p>{{ motor['descricao'] }}</p>
+
+            <div class="btn-car">
+                <a href="#">Adicionar ao carrinho <i class="fa-solid fa-cart-plus"></i></a>
+            </div>
+        </div>
+        
+    </section>
+    <section class="selection">
+        <ul>
+            <li id="ativo">Característica</li>
+            <li>Opcionais</li>
+            <li>Avaliações(0)</li>
+        </ul>
+    </section>
+    <section class="container-selection">
+        <h2>Características</h2>
+        <ul>
+            {% for caracteristica in motor['caracteristicas'] %}
+                {{ caracteristica|safe }}
+            {% endfor %}
+        </ul>
+    </section>
+{% endblock %}
+

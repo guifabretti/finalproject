@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/5ff722f86b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/produtos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/motor.css') }}">
+    <link href="/static/favicon.ico" rel="icon">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="secao-head-pagina">
+        <div class="secao-linha-branca">
+            <h1>PRODUTOS</h1>
+            <hr>
+            <p>Motores elétricos</p>
+        </div>
+        <div class="secao-linha-azul">
+            <hr>
+        </div>
+    </header>
+
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="direitos">
+            <p class="direitos-p">Todos os Direitos Reservados  JHM Motores - Desenvolvido por <a href="https://github.com/guifabretti">Guilherme Fabretti</a></p>
+        </div>
+    </footer>
+</body>
+</html>
